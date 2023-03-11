@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{site/fragments/dashboardLayout.html}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+
+<body>
+	<form th:action="@{'/site/add/' + ${productId}}" method="post">
+		<div layout:fragment="content">
+			<div class="row">
+				<div class="col-6">
+					<img
+						th:src="${product.image != null ? '/uploads/images/' + product.image : 'images/t.jpg'}"
+						alt="" width="500" height="500">
+				</div>
+
+				<div class="col-6">
+
+					<span>Name:
+						<h4 th:text="${product.name}"></h4>
+					</span> <span>Price:
+						<h4 th:text="${product.unitPrice}"></h4>
+					</span> <span>Description:
+						<h6 th:text="${product.description}">description</h6>
+					</span>
+
+
+					<div class="row mt-5 float-right">
+
+						<a class="btn btn-success "
+							th:href="@{'/site/add/' + ${productId}}">Add</a>
+					</div>
+
+				</div>
+
+
+			</div>
+		</div>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:fragment="nav">
+		<nav class="navbar navbar-expand-sm navbar-light bg-light">
+
+
+			<a class="navbar-brand" th:href="@{/site/commons/home}">LIMITED &
+				LUXURY</a>
+
+			<button class="navbar-toggler d-lg-none" type="button"
+				data-toggle="collapse" data-target="#collapsibleNavId"
+				aria-controls="collapsibleNavId" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavId">
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<li class="nav-item "><a class="nav-link"
+						th:href="@{/site/commons/home}">Home </a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Rolex</a></li>
+					<li class="nav-item"><a class="nav-link">Vertu </a></li>
+					<li class="nav-item"><a class="nav-link">Phone</a></li>
+					<li class="nav-item"><a class="nav-link">Service</a></li>
+
+					
+
+
+
+				</ul>
+
+
+				<div class="nav-item"><a style="color: black;" class="nav-link"
+						th:href="@{/site/views}">
+					<i class="fa fa-shopping-cart"></i></a></div>
+					
+					
+				<div class="nav-item dropdown">
+
+					<a class="nav-link dropdown-toggle" href="#" role="button"
+						data-toggle="dropdown" aria-expanded="false" style="color: black">
+						Account </a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" th:href="@{/alogin}">Login</a> <a
+							class="dropdown-item" th:href="@{/logout}">Logout</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" th:href="@{/site/commons/add}">Sign
+							Up</a> <a class="dropdown-item" th:href="@{/site/commons/forgot}">Forgot
+							password</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+</body>
+</html>

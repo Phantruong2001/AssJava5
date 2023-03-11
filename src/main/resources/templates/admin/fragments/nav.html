@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:fragment="nav">
+		<nav class="navbar navbar-expand-sm navbar-light bg-light">
+
+
+			<a class="navbar-brand" th:href="@{/admin/commons/home}">FPT Shop</a>
+
+			<button class="navbar-toggler d-lg-none" type="button"
+				data-toggle="collapse" data-target="#collapsibleNavId"
+				aria-controls="collapsibleNavId" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavId">
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<li class="nav-item "><a class="nav-link"
+						th:href="@{/admin/commons/home}">Home </a></li>
+					<li class="nav-item"><a class="nav-link" th:href="@{/site/commons}">Customer</a>
+					</li>
+					<li class="nav-item"><a class="nav-link"
+						th:href="@{/admin/categories/searchpaginated}">Category</a></li>
+					<li class="nav-item"><a class="nav-link"
+						th:href="@{/admin/products/searchpaginated}">Product</a></li>
+					<li class="nav-item"><a class="nav-link">Order</a></li>
+					
+
+
+
+				</ul>
+
+				<div class="nav-item dropdown float-right "><a
+					class="nav-link dropdown-toggle" href="#" role="button"
+					data-toggle="dropdown" aria-expanded="false">Account </a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" th:href="@{/alogin}">Login</a> 
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" th:href="@{/logout}">Logout</a>
+					</div></div>
+			</div>
+		</nav>
+	</div>
+</body>
+</html>
